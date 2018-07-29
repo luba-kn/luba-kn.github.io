@@ -1,0 +1,70 @@
+.b-latestWorks
+	padding-top: 20px
+
+	&__titleWrap
+		display: flex
+
+	&__title
+		color: #000
+		font-size: 15px
+		font-weight: 700
+		line-height: 24px
+		text-transform: uppercase
+
+		&_margin
+			margin-left: 25px
+
+	&__icon
+		color: $accentColor
+		font-size: 24px
+		line-height: 24px
+
+	&__controls
+		text-align: right
+
+	&__controlLink
+		display: inline-block
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		background-color: #81e4ed
+		text-align: center
+
+		&_margin
+			margin-left: 11px
+
+	&__controlArrow
+		color: #434343
+		font-size: 19px
+		line-height: 20px
+		text-decoration: none
+
+	&__imgWrap
+		position: relative
+	
+		+media-breakpoint-down(md)
+			text-align: center
+	
+		&_margin
+			margin-top: 20px
+
+		&:hover
+			.b-latestWorks__imgHover
+				display: block
+				color: #fff
+
+	&__imgHover
+		display: none
+		position: absolute
+		background-color: $accentColor
+		width: 220px
+		height: 81px
+		left: 15px
+		bottom: 0
+		line-height: 81px
+		color: #fff
+		font-size: 30px
+		text-align: center
+
+				
+			

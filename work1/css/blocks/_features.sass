@@ -1,0 +1,60 @@
+.b-features
+	background-color: $bgSectionColor
+	box-sizing: border-box
+	padding-top: 50px
+	padding-bottom: 50px
+	
+	&__item
+	
+		&_margin
+			@include media-breakpoint-down(md)
+				margin-bottom: 20px
+	
+	&_border
+		box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.07)
+		border: 1px solid rgba(0, 0, 0, .15)
+
+	
+	&__titleWrap
+		display: flex
+
+	&__titleIcon
+		width: 40px
+		height: 40px
+		background-color: $accentColor
+		border-radius: 50%
+		color: #fff
+		text-align: center
+		line-height: 40px
+		font-size: 20px
+
+	&__title
+		color: #000
+		font-size: 15px
+		font-weight: 700
+		line-height: 40px
+		text-transform: uppercase
+		
+		&_margin
+			margin-left: 20px
+
+	&__text
+		color: #363636
+		font-size: 13px
+		font-weight: 400
+		line-height: 20px
+
+	&__readMoreWrap
+		color: #000
+		font-size: 13px
+
+	&__readMore
+		color: $accentColor
+		font-size: 13px
+		font-weight: 400
+		line-height: 20px
+
+		&:hover
+			text-decoration: none
+			color: #de5732
+

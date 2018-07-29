@@ -1,0 +1,71 @@
+.b-header
+	background-color: $bgSectionColor
+	box-sizing: border-box
+		
+	&_border
+		box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.07)
+		border: 1px solid rgba(0, 0, 0, .15)
+
+	&__logo
+		font-family: Lato, sans-serif
+		color: #000
+		font-size: 50px
+		font-weight: 900
+		line-height: 37px
+
+		&:hover
+			text-decoration: none
+			color: #000
+		
+		&_margin
+			margin-top: 36px
+
+		&_accent
+			color: $accentColor
+			font-size: 50px
+			font-weight: 400
+
+			&:hover
+				color: $accentColor
+
+.b-myNav
+	box-sizing: border-box
+	padding-top: 35px
+	padding-bottom: 35px
+	
+	&__list
+			
+	&__item
+		&_border
+			border-top: 5px solid transparent
+
+		&:hover
+			border-top: 5px solid $accentColor
+			background-color: #fff
+			color: $accentColor
+
+.navbar-light .navbar-nav .nav-item .b-myNav__link
+	text-transform: uppercase
+	color: #000
+	font-size: 13px
+	font-weight: 700
+	box-sizing: border-box
+	padding-left: 20px
+	padding-right: 20px
+		
+	&:hover
+		color: $accentColor
+
+.b-myNav__dropdownList
+	border-bottom: 5px solid $accentColor
+		
+.b-myNav__dropdownItem
+	color: #000
+	font-size: 13px
+	font-weight: 400
+	line-height: 15px
+
+	&:hover
+		color: $accentColor
+		background-color: #fff
+	

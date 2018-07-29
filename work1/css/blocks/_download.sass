@@ -1,0 +1,67 @@
+.b-download
+	padding-top: 40px
+	padding-bottom: 40px
+
+	&__wrap
+		padding: 37px 31px 35px
+		box-sizing: border-box
+		background-color: #e8fcfe
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		+media-breakpoint-down(md)
+			flex-direction: column
+			
+
+		&_border
+			border: 1px solid #81e4ed
+
+	&__text
+		color: #363636
+		font-size: 16px
+		font-weight: 400
+		line-height: 26px
+
+		&_margin
+			margin-bottom: 0
+		
+			+media-breakpoint-down(md)
+				margin-bottom: 15px
+
+	&__link
+		display: block
+		min-width: 240px
+		padding: 16px 19px 16px 69px
+		box-sizing: border-box
+		background-image: url("../img/download.png"), linear-gradient(0deg, #2aacc8 0%, #60cede 14%, #72dae6 50%, #81e4ed 100%)
+		background-repeat: no-repeat, repeat
+		background-position: 19px 15px, 0 0
+		background-size: auto
+
+		background-image: url("../img/download.png"), -webkit-linear-gradient(90deg, #2aacc8 0%, #60cede 14%, #72dae6 50%, #81e4ed 100%)
+		background-image: url("../img/download.png"), -moz-linear-gradient(90deg, #2aacc8 0%, #60cede 14%, #72dae6 50%, #81e4ed 100%)
+		background-image: url("../img/download.png"), -o-linear-gradient(90deg, #2aacc8 0%, #60cede 14%, #72dae6 50%, #81e4ed 100%)
+		background-image: url("../img/download.png"), -ms-linear-gradient(90deg, #2aacc8 0%, #60cede 14%, #72dae6 50%, #81e4ed 100%)
+		
+		box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2)
+		color: #0d0707
+		font-size: 18px
+		font-weight: 700
+		line-height: 26px
+		text-transform: uppercase
+		text-decoration: none
+		
+		&:hover
+			text-decoration: none
+			color: #0d0707
+
+		&_border
+			border-radius: 8px
+			border: 1px solid $accentColor
+
+		&_margin
+			margin-left: 82px
+
+			+media-breakpoint-down(md)
+				margin-left: 0

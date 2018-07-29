@@ -1,0 +1,53 @@
+.b-footer
+	background-color: $bgSectionColor
+	box-sizing: border-box
+	padding-top: 33px
+	padding-bottom: 40px
+	color: #363636
+	font-size: 13px
+	font-weight: 400
+	
+	&_border
+		box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.07)
+		border: 1px solid rgba(0, 0, 0, .15)
+
+	&__item
+		&_margin
+			+media-breakpoint-down(md)
+				margin-bottom: 20px
+
+	&__title
+		color: #000
+		font-size: 15px
+		font-weight: 700
+		text-transform: uppercase
+
+		&_margin
+			margin-bottom: 20px
+
+	&__aboutText
+	
+	&__link
+		display: block
+		color: #363636
+		height: 25px
+
+		&:hover
+			color: #363636
+
+	&__addrCompany
+		font-weight: 700
+
+	&__phone
+		&_margin
+			margin-top: 20px
+
+	&__socialWrap
+		width: 193px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		&_margin
+			margin-top: 10px
+
