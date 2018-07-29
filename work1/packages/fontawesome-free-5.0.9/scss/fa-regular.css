@@ -8,8 +8,6 @@
   font-weight: 400;
   src: url("../webfonts/fa-regular-400.eot");
   src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
-
-/* line 19, E:/!Geek/!frontend/html5-css3/lesson3/knyazeva_dz2/packages/fontawesome-free-5.0.9/scss/fa-regular.scss */
 .far {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
