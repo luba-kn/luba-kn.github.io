@@ -1,0 +1,52 @@
+.b-slider
+	background-color: #f2f2f2
+	min-height: 480px
+	padding-top: 30px
+	padding-bottom: 30px
+	box-sizing: border-box
+	position: relative
+
+	&__imgWrap
+		background-color: #fff
+		padding: 9px
+		height: 360px
+
+		&_border
+			border: 1px solid #e6e6e6
+	
+	&__controls
+		width: 156px
+		height: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&_bottom
+			position: absolute
+			bottom: 30px
+			left: calc(50% - 78px)
+
+	&__control
+		background-color: #333
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		line-height: 20px
+		color: #fff
+		font-size: 12px
+		text-align: center
+		text-decoration: none
+
+	&__item
+		background-color: #333
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		border: 2px solid #333
+
+		&:hover
+			background-color: #f2f2f2
+
+		&_active
+			background-color: #f2f2f2
+		

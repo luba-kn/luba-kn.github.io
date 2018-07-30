@@ -1,0 +1,812 @@
+@import variables
+
+body
+	margin: 0
+	padding: 0
+	font-family: Lato, sans-serif
+
+/* часть заголовка секции желктого цвета */
+.sectionHeadColor
+	color: #ffc61a
+	font-size: 36px
+	font-weight: 900
+	line-height: 36px
+	text-transform: uppercase
+	text-align: center
+	margin: 0
+
+.sectionHeadDark
+	color: $darkColor
+	font-size: 44px
+	font-weight: 900
+	line-height: 44px
+	text-transform: uppercase
+	text-align: center
+	margin: 0
+
+.sectionHeadLight
+	color: $lightColor
+	font-size: 44px
+	font-weight: 900
+	line-height: 44px
+	text-transform: uppercase
+	text-align: center
+	margin: 0
+
+.container
+	max-width: 1600px
+	margin: 0 auto
+
+=button($color,$bgColor)
+	display: block
+	border-radius: 7px
+	background-color: $bgColor
+	font-family: "Bebas Neue", sans-serif
+	color: $color
+	font-size: 30px
+	font-weight: 400
+	line-height: 50px
+	text-align: center
+	text-transform: uppercase
+	text-decoration: none
+	
+
+.header
+	min-height: 738px
+	padding-bottom: 50px
+	box-sizing: border-box
+	background: url("../img/bg_header.jpg") no-repeat center center
+	background-size: cover
+	position: relative
+
+	.headerUp
+		box-sizing: border-box
+		padding: 37px 79px 0
+		display: flex
+		justify-content: space-between
+		+customRespond(0, 1199px)
+			flex-direction: column
+
+		.logo
+			p:first-child
+				color: $lightColor
+				font-size: 40px
+				font-weight: 900
+				margin: 0
+
+				span
+					color: #daa504
+					text-transform: uppercase
+	
+			p:last-child
+				color: $lightColor
+				font-size: 15px
+				font-weight: 700
+				letter-spacing: 3px
+				text-transform: uppercase
+				margin: 0
+			
+			transition-duration: 1s
+			&:hover
+				transform: perspective(500px) rotateY(45deg)
+
+		nav
+			a
+				display: inline-block
+				padding: 0 21px
+				height: 34px
+				text-decoration: none
+				text-transform: uppercase
+				line-height: 34px
+				color: $lightColor
+				font-size: 17px
+				font-weight: 900
+				border-radius: 17px
+				
+
+				&:hover
+					background-color: #ffc61a
+					border-radius: 17px
+					color: $darkColor
+					transform: scale(1.1, 1.1)
+					transition-duration: 1s
+
+				+customRespond(0, 1199px)
+					margin-top: 10px
+				+customRespond(0, 991px)
+					display: block
+			
+
+	.headerCenter
+		margin-top: 62px
+
+		.call
+			height: 26px
+			@extend .sectionHeadColor
+	
+		.tel
+			height: 55px
+			color: $lightColor
+			font-size: 72px
+			font-weight: 900
+			line-height: 72px
+			text-align: center
+			margin: 21px 0 30px 0
+			+customRespond(0, 1199px)
+				height: auto
+
+		.site
+			height: 15px
+			color: $lightColor
+			font-size: 20px
+			font-weight: 900
+			line-height: 20px
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 15px
+			margin: 0
+			+customRespond(0, 1199px)
+				height: auto
+			+respondTo(phones)
+				font-size: 16px
+				letter-spacing: 5px
+
+	img
+		position: absolute
+		top: 375px
+		left: calc(50% - 400px)
+		+respondTo(tablets)
+			display: none
+		+respondTo(wide-phones)
+			display: none
+		+respondTo(phones)
+			display: none
+		animation-name: animationBigCar
+		animation-duration: 4s
+		animation-timing-function: linear
+
+.servies
+	background-color: $bgSectionColor
+	padding-top: 155px
+	padding-bottom: 93px
+	box-sizing: border-box
+
+	.grid4 
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: "l r"
+		width: $sectionWidth
+		margin: 0 auto
+		+customRespond(0, 1199px)
+			width: 90%
+		+respondTo(wide-phones)
+			grid-template-columns: 1fr
+			grid-template-areas: "l" "r"
+			grid-row-gap: 20px
+		+respondTo(phones)
+			grid-template-columns: 1fr
+			grid-template-areas: "l" "r"
+			grid-row-gap: 20px
+
+		.bestIn
+			grid-area: l
+			padding-right: 54px
+			+respondTo(small-desktops)
+				padding-right: 15px
+			+respondTo(tablets)
+				padding-right: 15px
+			+respondTo(wide-phones)
+				padding-right: 0
+			+respondTo(phones)
+				padding-right: 0
+
+			h3
+				color: $darkColor
+				font-size: 35px
+				font-weight: 900
+				text-transform: uppercase
+				margin: 0
+
+			h2
+				color: $textColor
+				font-size: 50px
+				font-weight: 900
+				text-transform: uppercase
+				margin: 26px 0 44px 0
+
+			p
+				color: $textColor
+				font-size: 18px
+				font-weight: 400
+
+			a
+				margin-top: 45px
+				width: 166px
+				height: 50px
+				+button($lightColor,$darkColor)
+				
+				&:hover
+					transform: translate(5px, -5px)
+					transition-duration: 1s
+
+		.bookACab
+			grid-area: r
+			justify-self: right
+			width: 422px
+			height: 450px
+			background-color: $lightColor
+			+respondTo(small-desktops)
+				justify-self: left
+			+respondTo(wide-phones)
+				justify-self: center
+			+respondTo(phones)
+				height: auto
+				width: 211px
+				justify-self: center
+				padding-bottom: 20px
+			
+
+			.formHead
+				box-sizing: border-box
+				height: 77px
+				background-color: #171717
+				padding-left: 35px
+				line-height: 77px
+				color: $lightColor
+				font-size: 34.43px
+				font-weight: 900
+				text-transform: uppercase
+
+				span
+					color: #ffc61a
+	
+				+respondTo(phones)
+					height: auto
+
+			form
+				padding-left: 35px
+				padding-bottom: 15px
+				padding-top: 30px
+				box-sizing: border-box
+				background-color: $lightColor
+
+				input
+					outline: none
+					border: none
+					border-bottom: 3px solid #e4e4e4
+					padding: 0
+					margin-bottom: 30px
+					width: 171px
+					height: 30px
+					color: $darkColor
+					font-size: 20px
+					font-weight: 600
+
+					&:nth-child(even)
+						color: #4b4b4b
+						font-weight: 500
+						margin-left: 19px
+						+respondTo(phones)
+							margin-left: 0
+
+					&:last-child
+						width: 365px
+						+respondTo(phones)
+							width: 171px
+
+			a
+				margin-left: 21px
+				margin-right: 25px
+				height: 50px
+				+button($lightColor,$darkColor)
+						
+.tariffs
+	padding-bottom: 77px
+	padding-top: 63px
+
+	h3
+		@extend .sectionHeadDark
+	
+		span
+			@extend .sectionHeadColor
+	
+	.tarifList
+		display: flex
+		justify-content: space-between
+		width: $sectionWidth
+		margin: 133px auto 0
+		+customRespond(0, 1199px)
+			width: 90%
+			flex-wrap: wrap
+			justify-content: space-around
+			margin-top: 33px
+
+		.tarifItem
+			background-color: #f5f4f2
+			width: 373px
+			padding-bottom: 20px
+			position: relative
+			text-align: center
+			+customRespond(0, 1199px)
+				margin-top: 100px
+			+respondTo(phones)
+			
+			h4
+				margin-top: 124px
+				margin-bottom: 20px
+				color: $darkColor
+				font-size: 30px
+				font-weight: 900
+				text-transform: uppercase
+				+respondTo(phones)
+					margin-top: 50px
+				
+	
+			img
+				position: absolute
+				top: -84px
+				left: 0
+				transform-origin: 50% 0
+				&:hover 
+					transition-duration: 2s
+					transform: rotateZ(-360deg)
+	
+				+respondTo(phones)
+					width: 200px
+					top: -50px
+					left: calc(50% - 99px)
+					
+	
+			p
+				margin: 0 35px
+				color: $textColor
+				font-size: 18px
+				line-height: 20px
+				font-weight: 400
+	
+			.price
+				margin: 33px 0
+				color: #ffc61a
+				font-size: 44px
+				line-height: 44px
+				font-weight: 900
+				text-transform: uppercase
+	
+			a
+				width: 166px
+				margin-left: 101px
+				+button($darkColor,$bgSectionColor)
+				&:hover
+					transform: translate(5px, -5px)
+					transition-duration: 1s
+	
+				+respondTo(phones)
+					margin: 0 auto
+	
+		.promo
+			background-color: $bgSectionColor
+
+			a
+				+button($lightColor,$darkColor)
+	
+			.price
+				color: $darkColor
+
+.weDoBest
+	background: url("../img/bg_wish.jpg") no-repeat
+	background-color: $darkColor
+	background-size: cover
+	padding-top: 81px
+	padding-bottom: 81px
+	box-sizing: border-box
+
+	h3
+		margin-bottom: 92px
+		@extend .sectionHeadLight
+	
+		span
+			@extend .sectionHeadColor
+	
+	.gridBest
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: repeat(2,minmax(180px,auto))
+		grid-template-areas: "div1 div2" "div3 div4"
+		grid-column-gap: 191px
+		width: $sectionWidth
+		margin: 0 auto
+		
+		.div1
+			grid-area: div1
+			
+		.div2
+			grid-area: div2
+			
+		.div3
+			grid-area: div3
+			
+		.div4
+			grid-area: div4
+			
+		+customRespond(0, 1199px)
+			width: 90%
+			grid-column-gap: 30px
+		+respondTo(wide-phones)
+			grid-template-columns: 1fr
+			grid-template-rows: repeat(4,minmax(180px,auto))
+			grid-row-gap: 20px
+			grid-template-areas: "div1" "div2" "div3" "div4"
+		+respondTo(phones)
+			grid-template-columns: 1fr
+			grid-template-rows: repeat(4,minmax(180px,auto))
+			grid-row-gap: 20px
+			grid-template-areas: "div1" "div2" "div3" "div4"
+		
+	.bestItem
+	
+		.iconBest
+			width: 81px
+			height: 81px
+			border-radius: 50%
+			background-color: $bgSectionColor
+			float: left
+			margin-right: 34px
+			color: #161616
+			font-size: 30px
+			font-weight: 400
+			line-height: 81px
+			text-align: center
+			+respondTo(phones)
+				float: none
+				margin: 20px auto
+				width: 120px
+				height: 120px
+				line-height: 120px
+
+		h4
+			margin: 0 0 15px 0
+			color: #ffc61a
+			font-size: 25px
+			line-height: 25px
+			font-weight: 900
+			text-transform: uppercase
+
+		p
+			margin: 0
+			color: $lightColor
+			font-size: 18px
+			font-weight: 400
+			width: 366px
+			overflow: hidden
+			+customRespond(0, 1199px)
+				width: auto
+			
+		
+	a
+		+button($darkColor,$bgSectionColor)
+		width: 166px
+		margin: 30px auto 0
+
+		
+
+.download
+	padding-top: 65px
+	padding-bottom: 81px
+	box-sizing: border-box
+	
+	background: url("../img/bg_phone.png") no-repeat top 185px left 949px
+	min-height: 651px
+	+customRespond(0, 991px)
+		background-position: bottom right
+
+
+	h3
+		margin-bottom: 81px
+		@extend .sectionHeadDark
+	
+		span
+			@extend .sectionHeadColor
+	
+	.app
+		margin-left: 331px
+		max-width: 440px
+		+customRespond(0, 1199px)
+			margin: 0 auto
+			padding: 0 20px
+
+		h4
+			color: $darkColor
+			font-size: 26px
+			font-weight: 900
+			margin: 0 0 28px 0
+
+		p
+			color: $textColor
+			font-size: 18px
+			font-weight: 400
+			margin: 0 0 63px 0
+
+		.appGoogle, .appApple
+			display: inline-block
+			width: 210px
+			height: 65px
+
+		.appGoogle
+			margin-right: 16px
+			background-image: url("../img/appGoogle.png")
+
+		.appApple
+			background-image: url("../img/appApple.png")
+	
+.happyClients
+	background-image: url("../img/bg_clients.jpg")
+	min-height: 610px
+	background-size: cover
+	padding-top: 110px
+	padding-bottom: 81px
+	box-sizing: border-box
+	position: relative
+	
+	animation-name: animationBgClients
+	animation-duration: 20s
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+	
+	h3
+		z-index: inherit
+		grid-area: h3
+		@extend .sectionHeadLight
+		+respondTo(phones)
+			font-size: 36px
+	
+		span
+			@extend .sectionHeadColor
+			+respondTo(phones)
+				font-size: 28px
+	
+	.review1
+		grid-area: review1
+
+	.review2
+		grid-area: review2
+
+	.review1, .review2
+		background-color: #040707
+		border-radius: 40px
+		padding: 42px 53px 30px
+		position: relative
+
+		p
+			color: $lightColor
+			font-size: 18px
+			font-weight: 400
+			margin: 0 0 24px 0
+
+		.client
+			height: 74px
+			display: flex
+			align-items: center
+
+			img
+				margin-right: 18px
+				width: 74px
+				height: 74px
+	
+			.name
+				text-transform: uppercase
+				color: #ffc61a
+				font-size: 25px
+				line-height: 25px
+				font-weight: 900
+	
+				.profession
+					text-transform: uppercase
+					color: $lightColor
+					font-size: 18px
+					line-height: 18px
+					font-weight: 900
+	
+	.review1:after
+		content: ""
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		border: 10px solid #040707
+		border-bottom: 10px solid transparent
+		border-right: 10px solid transparent
+		bottom: -20px
+		right: 115px
+
+	.review2:after
+		content: ""
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		border: 10px solid #040707
+		border-bottom: 10px solid transparent
+		border-left: 10px solid transparent
+		bottom: -20px
+		left: 115px
+
+.gridClients
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-template-rows: 183px 240px
+	grid-template-areas: "h3 h3" "review1 review2"
+	grid-column-gap: 32px
+	width: $sectionWidth
+	margin: 0 auto
+	z-index: 10
+	+customRespond(0, 1199px)
+		width: 90%
+		grid-template-columns: 1fr
+		grid-template-rows: 183px repeat(2, minmax(240px,auto))
+		grid-template-areas: "h3" "review1" "review2"
+		grid-row-gap: 32px
+	
+.call24Hours
+	background-color: $bgSectionColor
+	padding-top: 73px
+	padding-bottom: 91px
+
+	h3
+		color: $darkColor
+		font-size: 35px
+		font-weight: 900
+		text-align: center
+		text-transform: uppercase
+		margin: 0 0 20px 0
+
+	p
+		color: $darkColor
+		font-size: 77px
+		line-height: 77px
+		font-weight: 900
+		text-align: center
+		margin: 0
+
+.footer
+	background-image: url("../img/bg_footer.jpg")
+	min-height: 502px
+	padding: 90px 0
+	box-sizing: border-box
+	
+	.footHead
+		border-bottom: 8px solid $bgSectionColor
+		color: $lightColor
+		font-size: 25px
+		font-weight: 900
+		text-transform: uppercase
+
+	.footContent
+		padding-top: 45px
+		color: $lightColor
+		font-size: 18px
+		font-weight: 400
+		+respondTo(wide-phones)
+			margin-bottom: 40px
+		+respondTo(phones)
+			margin-bottom: 40px
+
+		.social
+			margin-top: 39px
+			width: 132px
+
+			a
+				color: #ffc61a
+				font-size: 20px
+				letter-spacing: 6px
+				text-decoration: none
+	
+		.os
+			color: #ffc61a
+			font-size: 20px
+			font-weight: 400
+
+		.fa-android, .fa-apple
+			color: $lightColor
+			font-size: 30px
+			line-height: 30px
+
+		.contactItem
+			margin-bottom: 24px
+			display: flex
+			align-items: flex-start
+
+			.contactIcon
+				width: 17px
+				margin: 0
+	
+			.text
+				margin: 0 0 0 27px
+	
+	.gridDownload
+		display: grid
+		grid-template-columns: 155px auto
+		grid-template-rows: 80px 30px 30px
+		grid-row-gap: 14px
+		div:first-child
+			grid-column: 1/3
+			grid-row: 1
+
+.gridFooter
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: 74px auto
+	grid-column-gap: 91px
+	width: $sectionWidth
+	margin: 0 auto
+	grid-template-areas: "headAbout headDownload headContact" "contentAbout contentDownload contentContact"
+
+	+customRespond(0, 1199px)
+		width: 90%
+	+respondTo(tablets)
+		grid-column-gap: 20px
+	+respondTo(wide-phones)
+		grid-template-columns: 1fr
+		grid-template-rows: 74px auto 74px auto 74px auto
+		grid-template-areas: "headAbout" "contentAbout" "headDownload" "contentDownload" "headContact" "contentContact"
+	+respondTo(phones)
+		grid-template-columns: 1fr
+		grid-template-rows: 74px auto 74px auto 74px auto
+		grid-template-areas: "headAbout" "contentAbout" "headDownload" "contentDownload" "headContact" "contentContact"
+	
+	.headAbout
+		grid-area: headAbout
+	.headDownload
+		grid-area: headDownload
+	.headContact
+		grid-area: headContact
+	.contentAbout
+		grid-area: contentAbout
+	.contentDownload
+		grid-area: contentDownload
+	.contentContact
+		grid-area: contentContact
+	
+.copy
+	background-color: #000
+	min-height: 52px
+	color: $lightColor
+	font-size: 14px
+	font-weight: 400
+	text-align: center
+	line-height: 52px	
+
+@keyframes animationBigCar
+	0%
+		left: 0
+		top: 0
+		width: 10px
+		height: 10px
+	20%
+		left: 80px
+		top: 80px
+	40%
+		left: 160px
+		top: 160px
+	60%	
+		left: 240px
+		top: 240px
+	80%
+		left: 320px
+		top: 300px
+	100%
+		top: 375px
+		left: calc(50% - 400px)
+		width: 826px
+		height: 484px
+
+@keyframes animationBgClients
+	0%
+		background-image: url("../img/bg_clients.jpg")
+	25%
+		background-image: url("../img/bg_header.jpg")
+	50%
+		background-image: url("../img/bg_wish.jpg")
+	75%
+		background-image: url("../img/bg_footer.jpg")
+	100%
+		background-image: url("../img/bg_clients.jpg")

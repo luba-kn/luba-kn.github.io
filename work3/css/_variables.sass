@@ -1,0 +1,46 @@
+$lightColor: #fff
+$darkColor: #000
+$textColor: #100f0f
+
+$bgSectionColor: #ffc61a
+
+$sectionWidth: 1190px
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i')
+
+@font-face 
+	font-family: "Bebas Neue"
+	src: url(../fonts/Bebas_Neue.ttf)
+
+@mixin respondTo($_media)
+	@if $_media == phones
+		@media all and (max-width: 479px)
+			@content
+  
+	@else if $_media == wide-phones 
+		@media all and (min-width: 480px) and (max-width: 767px)
+			@content
+  
+	@else if $_media == tablets 
+		@media all and (min-width: 768px) and (max-width: 991px)
+			@content
+  
+	@else if $_media == small-desktops
+		@media all and (min-width: 992px) and (max-width: 1199px)
+			@content
+  
+	@else if $_media == lg-desktops
+		@media all and (min-width: 1200px) and (max-width: 1440px)
+			@content
+  
+	@else if $_media == xlg-desktops 
+		@media all and (min-width: 1441px) and (max-width: 1920px)
+			@content
+  
+
+=customRespond($_minWidth, $_maxWidth)
+	@media all and (min-width: $_minWidth) and (max-width: $_maxWidth)
+		@content
+  
+
+
